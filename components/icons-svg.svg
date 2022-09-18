@@ -1,0 +1,11 @@
+<svg class="icon">
+    <use xlink:href="#chevron"></use>
+</svg>
+
+<svg class="icon">
+    <use xlink:href="#line"></use>
+</svg>
+
+<svg class="icon">
+    <use xlink:href="#short-line"></use>
+</svg>
