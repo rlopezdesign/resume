@@ -11,15 +11,21 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  letter-spacing: 7px;
+  letter-spacing: 0.3rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 200;
   letter-spacing: 7px;
+}
+
+h3 {
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 6px;
 }
 
 p {

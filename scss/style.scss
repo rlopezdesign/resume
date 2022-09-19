@@ -5,9 +5,86 @@
 // *Nav unit
 
 
+
 .logo {
     fill: #fff;
-
-    
 }
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+// !Collapsible 
+
+.collapsible {
+
+    transition: config.$transition;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        
+    }
+
+    &__chevron {
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        cursor: pointer;
+    }
+
+    &__line {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+        height: .3rem;
+    }
+
+    &__short-line {
+        max-height: 0;
+
+        // transition: config.$transition
+    }
+
+    &__chevron, &__line, &__short-line, &__header {
+        transition: config.$transition;
+    }
+
+
+    &--expanded {
+
+        .collapsible__header {
+            max-height: 100vh;
+            opacity: 1;
+            overflow: visible;
+
+        }
+
+        .collapsible__short-line {
+            max-height: .8vh;
+            opacity: 1;
+            overflow: visible;
+            transform: translateY(.35rem); 
+
+        }
+
+        .collapsible__chevron {
+            transform: translatey(-3.2rem);
+            rotate: 180deg;
+
+        }
+
+
+    }
+
+}
+
+
 

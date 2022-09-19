@@ -1,11 +1,15 @@
 <svg width="0" height="0" class="hidden">
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.655 10.82" id="chevron">
-    <path id="down-chevron" d="M18.633,91.567l-8.806,8.777L1.022,91.567,0,92.592l9.827,9.8,9.827-9.8Z" transform="translate(0 -91.567)" fill="#ffbaba"></path>
+    <path id="down-chevron" d="M18.633,91.567l-8.806,8.777L1.022,91.567,0,92.592l9.827,9.8,9.827-9.8Z"
+      transform="translate(0 -91.567)" fill="#ffbaba"></path>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428 1" id="line">
     <line id="Line_1" x2="428" transform="translate(0 0.5)" fill="none" stroke="#ffbaba" stroke-width="1"></line>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 16" id="short-line">
     <line id="Line_2" y2="16" transform="translate(0.5)" fill="none" stroke="#fff" stroke-width="1"></line>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 16" id="short-line2">
+    <line id="Line_2" y2="16" transform="translate(0.5)" fill="none" stroke="#ffbaba" stroke-width="1"></line>
   </symbol>
 </svg>

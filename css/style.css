@@ -11,15 +11,21 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  letter-spacing: 7px;
+  letter-spacing: 0.3rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 200;
   letter-spacing: 7px;
+}
+
+h3 {
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 6px;
 }
 
 p {
@@ -32,4 +38,56 @@ p {
 
 .logo {
   fill: #fff;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.collapsible {
+  transition: all 0.4s;
+}
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.collapsible__chevron {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+.collapsible__line {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  height: 0.3rem;
+}
+.collapsible__short-line {
+  max-height: 0;
+}
+.collapsible__chevron, .collapsible__line, .collapsible__short-line, .collapsible__header {
+  transition: all 0.4s;
+}
+.collapsible--expanded .collapsible__header {
+  max-height: 100vh;
+  opacity: 1;
+  overflow: visible;
+}
+.collapsible--expanded .collapsible__short-line {
+  max-height: 0.8vh;
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(0.35rem);
+}
+.collapsible--expanded .collapsible__chevron {
+  transform: translatey(-3.2rem);
+  rotate: 180deg;
 }/*# sourceMappingURL=style.css.map */
