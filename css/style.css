@@ -36,6 +36,15 @@ p {
   fill: #fff;
 }
 
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.nav__link:hover {
+  color: #666;
+}
+
 .logo {
   fill: #fff;
 }
@@ -82,12 +91,39 @@ p {
   overflow: visible;
 }
 .collapsible--expanded .collapsible__short-line {
-  max-height: 0.8vh;
+  max-height: 0.6rem;
   opacity: 1;
   overflow: visible;
-  transform: translateY(0.35rem);
+  transform: translateY(0.27rem);
 }
 .collapsible--expanded .collapsible__chevron {
   transform: translatey(-3.2rem);
   rotate: 180deg;
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible__header {
+    padding: 0 3rem;
+    max-height: 100vh;
+    opacity: 1;
+    overflow: visible;
+  }
+  .collapsible__chevron {
+    display: none;
+  }
+  .collapsible__line {
+    width: 100%;
+  }
+  .collapsible__short-line {
+    display: none;
+  }
+  body h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  body h3 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin: 0.5rem 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
