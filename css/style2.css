@@ -44,7 +44,7 @@ body a {
 body a:hover {
   color: #666;
 }
-body h3 {
+body h2 {
   font-size: 1rem;
 }
 
@@ -112,14 +112,14 @@ body h3 {
     font-size: 3rem;
     margin-top: 0;
   }
-  body h3 {
+  body h2 {
     font-size: 1.2rem;
     letter-spacing: 3px;
     margin: 0.5rem 0.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  body h3 {
+  body h2 {
     font-size: 1.5rem;
   }
 }
@@ -168,6 +168,117 @@ body h3 {
 .top {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.top h3 {
+  font-size: 1.5rem;
+}
+
+.main__line {
+  height: 1rem;
+}
+
+.logo--rh {
+  height: 5rem;
+  margin: 2rem;
+}
+.logo--pink {
+  height: 5rem;
+  margin: 2rem;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+.experience--block {
+  display: flex;
+  flex-direction: column;
+}
+.experience--title {
+  margin: 2rem 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.experience--title__title {
+  position: absolute;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  left: 1rem;
+  top: -0.2rem;
+}
+.experience--title__locat {
+  position: absolute;
+  font-size: 0.8rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: #777;
+  left: 1rem;
+  top: 0.7rem;
+}
+.experience--title__time {
+  position: absolute;
+  font-size: 0.6rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: #777;
+  left: 19rem;
+  top: 0.5rem;
+}
+.experience--title__time-short {
+  left: 11rem;
+}
+.experience .same-company .experience--title__time {
+  left: 12rem;
+  top: 0.1rem;
+}
+.experience__line {
+  height: 1rem;
+  margin: 1rem;
+}
+.experience--list {
+  list-style: none;
+  padding-left: 0;
+  margin: 2rem 2rem;
+}
+.experience--list-item {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.space {
+  height: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin: auto 0;
+    width: 33%;
+  }
+  .logo--rh {
+    height: 15rem;
+  }
+  .logo--pink {
+    height: 10rem;
+    order: 1;
+  }
+  .experience {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .experience--block {
+    margin: 0;
+    width: 33%;
+  }
+  .experience--title__title {
+    font-size: 0.8rem;
+  }
+  .experience--list-item {
+    font-size: 0.9rem;
+  }
+  .space--holder {
+    width: 33%;
+  }
 }/*# sourceMappingURL=style2.css.map */

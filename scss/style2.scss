@@ -14,7 +14,7 @@ body {
         color: #666;
     }
 
-    h3 {
+    h2 {
         font-size: 1rem;
     }
 }
@@ -108,7 +108,7 @@ body {
             font-size: 3rem;
             margin-top: 0;
         }
-        h3 {
+        h2 {
             font-size: 1.2rem;
             letter-spacing: 3px;
             margin: .5rem .5rem;
@@ -118,7 +118,7 @@ body {
 
 @media screen and (min-width:1024px) {
 
-    body h3 {
+    body h2 {
         font-size: 1.5rem;
     }
     
@@ -196,6 +196,155 @@ body {
 .top {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 4rem;
+    margin-top: 4rem;
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.main {
+    &__line {
+        height: 1rem;
+    }
+}
+
+.logo {
+    &--rh {
+        height: 5rem;
+        margin: 2rem;
+    }
+    &--pink {
+        height: 5rem;
+        margin: 2rem;
+    }
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+
+    &--block{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--title {
+        margin: 2rem 3rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &__title {
+            position: absolute;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            left: 1rem;
+            top: -.2rem;
+
+        }
+
+        &__locat {
+            position: absolute;
+            font-size: .8rem;
+            letter-spacing: normal;
+            font-weight: 400;
+            color: #777;
+            left: 1rem;
+            top: .7rem;
+
+        }
+        &__time {
+            position: absolute;
+            font-size: .6rem;
+            letter-spacing: normal;
+            font-weight: 400;
+            color: #777;
+            left: 19rem;
+            top: .5rem;
+
+            &-short {
+                left: 11rem;
+            }
+        }
+
+    }
+
+    .same-company .experience--title__time {
+        left: 12rem;
+        top: .1rem;
+    }
+
+
+
+    &__line {
+        height: 1rem;
+        margin: 1rem;
+    }
+
+    &--list{
+        list-style: none;
+        padding-left: 0;
+        margin: 2rem 2rem;
+        &-item {
+            font-size: .7rem;
+            font-weight: 100;
+        }
+    }
+}
+
+.space {
+    height: 4rem;
+}
+
+@media screen and (min-width:1024px) {
+// ! This was the reason I had to recreate the entire project. using flex for both moble and desktop versions of the site is working out pretty swell.
+// ! key changes were to add spacer divs in desktop mode and give the pink logo a different order to that it's last on the flex order.
+// ! also had to change the width of all the divs to 33% so they could be even.
+
+    .logo {
+        margin: auto 0;
+        width: 33%;
+
+        &--rh {
+            height: 15rem;
+        }
+
+        &--pink {
+            height: 10rem;
+            order: 1;
+        }
+    }
+    .experience {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        &--block {
+            margin: 0;
+            width: 33%;
+        }
+
+        &--title {
+            &__title {
+                font-size: .8rem;
+            }
+        }
+
+        &--list {
+
+            &-item{   
+                font-size: .9rem;
+            }
+        }
+
+ 
+
+    }
+
+    .space {
+        &--holder {
+            width: 33%;
+        }
+    }
 }
