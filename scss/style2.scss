@@ -348,3 +348,37 @@ body {
         }
     }
 }
+
+
+// *Education Page 
+
+
+
+// School block
+
+.school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--name {
+
+        h3 {
+            font-size: .7rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        p {
+            color: #666;
+            margin-top: 0;
+        }
+    }
+}
+
+.logo {
+
+    &--cuny {
+        height: 7rem;
+        max-width: 200px;
+    }
+}

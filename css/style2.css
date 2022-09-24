@@ -281,4 +281,23 @@ body h2 {
   .space--holder {
     width: 33%;
   }
+}
+.school {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.school--name h3 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.school--name p {
+  color: #666;
+  margin-top: 0;
+}
+
+.logo--cuny {
+  height: 7rem;
+  max-width: 200px;
 }/*# sourceMappingURL=style2.css.map */
