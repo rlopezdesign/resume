@@ -1,0 +1,201 @@
+@use "config";
+
+
+// *Nav
+
+body {
+    
+    a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+    }
+    a:hover {
+        color: #666;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+// !Collapsible 
+
+.collapsible {
+
+    transition: config.$transition;
+
+    &__header{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 1.5rem;
+    }
+
+    &__chevron {
+        cursor: pointer;
+        height: 1.3rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 1.3rem;
+    }
+
+    &__line {
+        height: .3rem;
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    &__short-line {
+        max-height: 0;
+    }
+
+    &__chevron, &__line, &__short-line, &__header {
+        transition: config.$transition;
+    }
+
+
+    &--expanded {
+
+        .collapsible__header {
+            max-height: 100vh;
+            opacity: 1;
+            overflow: visible;
+
+        }
+
+        .collapsible__short-line {
+            max-height: .6rem;
+            opacity: 1;
+            overflow: visible;
+            transform: translateY(.27rem); 
+
+        }
+
+        .collapsible__chevron {
+            rotate: 180deg;
+            transform: translatey(-3.2rem);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .collapsible {
+
+        &__header {
+            max-height: 100vh;
+            opacity: 1;
+            overflow: visible;
+            padding: 0 3rem;
+        }
+
+        &__chevron {
+            display: none;
+        }
+
+        &__short-line {
+            display: none;
+        }    
+    }
+
+    body {
+        h1 {
+            font-size: 3rem;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin: .5rem .5rem;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    body h3 {
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+// *index page
+
+
+.summary {
+    &--line-container {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+        gap: 4rem;
+    }
+
+    &--title {
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+
+    &--text {
+        font-size: .9rem;
+        font-weight: 100;
+        margin: 0 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &--img {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+.icon {
+    &--line {
+        height: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .summary {
+
+        &--title {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &--text {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+  .summary {
+
+    &--title {
+        font-weight: 400;
+    }
+
+    &--text {
+        font-size: 1.5rem;
+    }
+  }
+    
+}
+
+
+// *Experience page
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}

@@ -7,15 +7,17 @@
 
 .nav {
 
-    &__link {
+    &__link, .name {
         text-decoration: none;
         color: #fff;
         transition: all .3s;
     }
 
-    &__link:hover {
+    &__link:hover, .name:hover {
         color: #666;
+        text-decoration: none;
     }
+
 }
 
 
@@ -27,6 +29,7 @@
 .icon {
     width: 2.5rem;
     height: 2.5rem;
+    fill: #fff;
 }
 
 // !Collapsible 
@@ -36,29 +39,28 @@
     transition: config.$transition;
 
     &__header{
+        align-items: center;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 0 1.5rem;
         max-height: 0;
-        overflow: hidden;
         opacity: 0;
-        
+        overflow: hidden;
+        padding: 0 1.5rem;
     }
 
     &__chevron {
-        width: 1.3rem;
+        cursor: pointer;
         height: 1.3rem;
         margin-bottom: 0;
         padding-bottom: 0;
-        cursor: pointer;
+        width: 1.3rem;
     }
 
     &__line {
-        width: 100%;
+        height: .3rem;
         margin-top: 0;
         padding-top: 0;
-        height: .3rem;
+        width: 100%;
     }
 
     &__short-line {
@@ -88,9 +90,8 @@
         }
 
         .collapsible__chevron {
-            transform: translatey(-3.2rem);
             rotate: 180deg;
-
+            transform: translatey(-3.2rem);
         }
 
     }
@@ -103,11 +104,10 @@
     .collapsible {
 
         &__header {
-            padding: 0 3rem;
             max-height: 100vh;
             opacity: 1;
             overflow: visible;
-            
+            padding: 0 3rem;
         }
 
         &__chevron {
@@ -142,5 +142,230 @@
 }
 
 
+
+// * main class 
+
+.main {
+
+    margin-top: 3rem;
+
+
+    &__summary {
+        padding: 1.5rem 1rem;
+        font-weight: 100;
+
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: top;
+    }
+
+
+    &--container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    &__line {
+        height: .6rem;
+        margin-bottom: 3rem;
+    }
+
+    &__img {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .main {
+
+        &__line {
+            height: .8rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            max-width: 50%;
+        }
+        &__img {
+            width: 9.5rem;
+            height: 9.5rem;
+
+        }
+        
+    }
+}
+
+// *experience page
+
+
+.experience {
+
+    width: 85%;
+    display: flex;
+    margin-bottom: 2.5rem;
+
+    &--logo {
+        width: 6rem;
+        height: 5rem;
+        margin: 1.5rem;
+    }
+
+    &--title {
+        position: absolute;
+        padding: 0;
+    
+    }
+
+    &__job-title{
+        font-size: .6rem;
+        letter-spacing: 1px;
+        text-align: left;
+        margin: 0;
+        
+    }
+
+    &__job-locat {
+        position: relative;
+        color: #666;
+        font-size: .6rem;
+        font-weight: 100;
+        text-align: left;
+        margin: 0;
+        top: -.5rem;
+     
+    }
+
+    &__job-time {
+        position: relative;
+        color: #666;
+        font-size: .5rem;
+        font-weight: 100;
+        text-align: right;
+        margin: 0;
+        left: 5rem;
+        top: -.2rem;
+    }
+
+    .same-company {
+        position: relative;
+        color: #666;
+        font-size: .5rem;
+        text-align: right;
+        margin: 0;
+        left: 5rem;
+        top: -.6rem;
+
+    }
+
+    &--list {
+        list-style: none;
+        margin-top: 3rem;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 100;
+        
+        .experience__list--item {
+            text-decoration: none;
+
+        }
+
+    }
+
+    &__line {
+        height: .8rem;
+        margin: .5rem 0;
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    .logo {
+        align-self: flex-start;
+        width: 15rem;
+        height: 15rem;
+
+        &--rh{
+            grid-area: logo1;   
+        }
+
+        &--pink {
+            grid-area: logo2;
+        }
+
+    }
+
+
+    .experience {
+        // ! Wasn't able to get it exactly like the mock up. had trouble with the job title/location formating. not able to space them out corretly. Mobile mode is fone though.
+
+        padding-left: 1rem;
+        &-1{
+            grid-area: main1;
+        }
+        &-2{
+            grid-area: main2;
+        }
+        &-3{
+            grid-area: main3;
+        }
+
+        &__job-time {
+            float: inline-end;
+        }
+
+        &__job-title {
+            font-size: 1rem;
+        }
+        &__job-locat {
+            margin-right: 8rem;
+            font-size: 3rem;
+        }
+
+        &__list-item {
+            font-size: 1rem;
+        }
+
+
+    }
+
+    .main {
+
+        p {
+            position: unset;
+            font-size: .8rem;
+            max-width: fit-content;
+        }
+
+
+        &--container {
+            display: grid;
+            grid-template-columns: 25vw 50vw 25vw;
+            grid-template-areas:    
+            ". top ."
+            "logo1 main1 ."
+            ". main2 ."
+            ". main3 logo2";
+            
+        }
+
+    }
+
+}
 
 

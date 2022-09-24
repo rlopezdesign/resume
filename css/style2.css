@@ -1,0 +1,173 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 62.5%;
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 6px;
+}
+
+p {
+  font-size: 0.7rem;
+}
+
+.logo {
+  fill: #fff;
+}
+
+body a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+body a:hover {
+  color: #666;
+}
+body h3 {
+  font-size: 1rem;
+}
+
+.collapsible {
+  transition: all 0.4s;
+}
+.collapsible__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+.collapsible__chevron {
+  cursor: pointer;
+  height: 1.3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 1.3rem;
+}
+.collapsible__line {
+  height: 0.3rem;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+}
+.collapsible__short-line {
+  max-height: 0;
+}
+.collapsible__chevron, .collapsible__line, .collapsible__short-line, .collapsible__header {
+  transition: all 0.4s;
+}
+.collapsible--expanded .collapsible__header {
+  max-height: 100vh;
+  opacity: 1;
+  overflow: visible;
+}
+.collapsible--expanded .collapsible__short-line {
+  max-height: 0.6rem;
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(0.27rem);
+}
+.collapsible--expanded .collapsible__chevron {
+  rotate: 180deg;
+  transform: translatey(-3.2rem);
+}
+
+@media screen and (min-width: 768px) {
+  .collapsible__header {
+    max-height: 100vh;
+    opacity: 1;
+    overflow: visible;
+    padding: 0 3rem;
+  }
+  .collapsible__chevron {
+    display: none;
+  }
+  .collapsible__short-line {
+    display: none;
+  }
+  body h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  body h3 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin: 0.5rem 0.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body h3 {
+    font-size: 1.5rem;
+  }
+}
+.summary--line-container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+  gap: 4rem;
+}
+.summary--title {
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+.summary--text {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 0 2rem;
+  margin-bottom: 4rem;
+}
+.summary--img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.icon--line {
+  height: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .summary--title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .summary--text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .summary--title {
+    font-weight: 400;
+  }
+  .summary--text {
+    font-size: 1.5rem;
+  }
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}/*# sourceMappingURL=style2.css.map */
