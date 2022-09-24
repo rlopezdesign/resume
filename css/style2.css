@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 100;
   letter-spacing: 6px;
 }
@@ -252,6 +252,11 @@ body h2 {
   height: 4rem;
 }
 
+@media screen and (min-width: 768px) {
+  .experience--list-item {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .logo {
     margin: auto 0;
@@ -272,8 +277,20 @@ body h2 {
     margin: 0;
     width: 33%;
   }
+  .experience--title {
+    margin: 1rem;
+  }
   .experience--title__title {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+  .experience--title__time {
+    left: 16.3rem;
+    top: 0.5rem;
+    letter-spacing: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .experience--list-item {
     font-size: 0.9rem;
@@ -288,8 +305,9 @@ body h2 {
   align-items: center;
 }
 .school--name h3 {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: bold;
+  letter-spacing: 3px;
   margin-bottom: 0;
 }
 .school--name p {
@@ -299,5 +317,65 @@ body h2 {
 
 .logo--cuny {
   height: 7rem;
-  max-width: 200px;
+  max-width: 14rem;
+}
+
+@media screen and (min-width: 768px) {
+  .school {
+    gap: 4rem;
+  }
+  .school p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo--cuny {
+    height: 9rem;
+  }
+  .school--name h3 {
+    font-size: 1.1rem;
+  }
+  .school--name p {
+    font-size: 1rem;
+  }
+}
+.showcase h3 {
+  font-size: 2.2em;
+  margin: 3rem;
+}
+.showcase--container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+.showcase--item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0.7rem;
+}
+.showcase .logo {
+  height: 5rem;
+  width: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase--item {
+    justify-content: center;
+  }
+  .showcase--item p {
+    font-size: 0.8rem;
+    width: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .showcase--item {
+    padding: 2rem;
+  }
+  .showcase p {
+    font-size: 1rem;
+  }
+  .showcase .logo {
+    height: 6rem;
+  }
 }/*# sourceMappingURL=style2.css.map */
