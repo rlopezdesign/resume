@@ -1,35 +1,22 @@
 @use "config";
 
 
+// *Nav
 
-// *Nav unit
-
-
-.nav {
-
-    &__link, .name {
-        text-decoration: none;
-        color: #fff;
-        transition: all .3s;
+body {
+    
+    a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
     }
-
-    &__link:hover, .name:hover {
+    a:hover {
         color: #666;
-        text-decoration: none;
     }
 
-}
-
-
-
-.logo {
-    fill: #fff;
-}
-
-.icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: #fff;
+    h2 {
+        font-size: 1rem;
+    }
 }
 
 // !Collapsible 
@@ -90,14 +77,11 @@
         }
 
         .collapsible__chevron {
-            rotate: 180deg;
+            transform: rotate(180deg);
             transform: translatey(-3.2rem);
         }
-
     }
-
 }
-
 
 @media screen and (min-width: 768px) {
 
@@ -114,15 +98,9 @@
             display: none;
         }
 
-        &__line {
-            width: 100%;
-        }
-
         &__short-line {
             display: none;
-
-        } 
-    
+        }    
     }
 
     body {
@@ -130,242 +108,458 @@
             font-size: 3rem;
             margin-top: 0;
         }
-
-        h3 {
+        h2 {
             font-size: 1.2rem;
             letter-spacing: 3px;
             margin: .5rem .5rem;
-            
-
         }
     }
 }
 
+@media screen and (min-width:1024px) {
 
-
-// * main class 
-
-.main {
-
-    margin-top: 3rem;
-
-
-    &__summary {
-        padding: 1.5rem 1rem;
-        font-weight: 100;
-
+    body h2 {
+        font-size: 1.5rem;
     }
+    
+}
 
-    .top {
+
+// *index page
+
+
+.summary {
+    &--line-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        grid-area: top;
-    }
-
-
-    &--container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    &__line {
-        height: .6rem;
-        margin-bottom: 3rem;
-    }
-
-    &__img {
-        width: 8rem;
-        height: 8rem;
-    }
-}
-
-
-
-@media screen and (min-width: 1024px) {
-
-    .main {
-
-        &__line {
-            height: .8rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 1.3rem;
-            max-width: 50%;
-        }
-        &__img {
-            width: 9.5rem;
-            height: 9.5rem;
-
-        }
-        
-    }
-}
-
-// *experience page
-
-
-.experience {
-
-    width: 85%;
-    display: flex;
-    margin-bottom: 2.5rem;
-
-    &--logo {
-        width: 6rem;
-        height: 5rem;
-        margin: 1.5rem;
+        margin: 4rem 0;
+        gap: 4rem;
     }
 
     &--title {
-        position: absolute;
-        padding: 0;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+
+    &--text {
+        font-size: .9rem;
+        font-weight: 100;
+        margin: 0 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &--img {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+.icon {
+    &--line {
+        height: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .summary {
+
+        &--title {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &--text {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+  .summary {
+
+    &--title {
+        font-weight: 400;
+    }
+
+    &--text {
+        font-size: 1.5rem;
+    }
+  }
     
+}
+
+
+// *Experience page
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+
+    h3 {
+        font-size: 1.5rem;
     }
+}
 
-    &__job-title{
-        font-size: .6rem;
-        letter-spacing: 1px;
-        text-align: left;
-        margin: 0;
-        
+.main {
+    &__line {
+        height: 1rem;
     }
+}
 
-    &__job-locat {
-        position: relative;
-        color: #666;
-        font-size: .6rem;
-        font-weight: 100;
-        text-align: left;
-        margin: 0;
-        top: -.5rem;
-     
+.logo {
+    &--rh {
+        height: 5rem;
+        margin: 2rem;
     }
-
-    &__job-time {
-        position: relative;
-        color: #666;
-        font-size: .5rem;
-        font-weight: 100;
-        text-align: right;
-        margin: 0;
-        left: 5rem;
-        top: -.2rem;
+    &--pink {
+        height: 5rem;
+        margin: 2rem;
     }
+}
 
-    .same-company {
-        position: relative;
-        color: #666;
-        font-size: .5rem;
-        text-align: right;
-        margin: 0;
-        left: 5rem;
-        top: -.6rem;
+.experience {
+    display: flex;
+    flex-direction: column;
 
-    }
-
-    &--list {
-        list-style: none;
-        margin-top: 3rem;
-        padding-left: 0;
+    &--block{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        font-weight: 100;
-        
-        .experience__list--item {
-            text-decoration: none;
+    }
 
+    &--title {
+        margin: 2rem 3rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &__title {
+            position: absolute;
+            font-size: .8rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            left: 1rem;
+            top: -.2rem;
+
+        }
+
+        &__locat {
+            position: absolute;
+            font-size: .8rem;
+            letter-spacing: normal;
+            font-weight: 400;
+            color: #777;
+            left: 1rem;
+            top: .7rem;
+
+        }
+        &__time {
+            position: absolute;
+            font-size: .6rem;
+            letter-spacing: normal;
+            font-weight: 400;
+            color: #777;
+            left: 19rem;
+            top: .5rem;
+
+            &-short {
+                left: 11rem;
+            }
         }
 
     }
 
+    .same-company .experience--title__time {
+        left: 12rem;
+        top: .1rem;
+    }
+
+
+
     &__line {
-        height: .8rem;
-        margin: .5rem 0;
+        height: 1rem;
+        margin: 1rem;
+    }
+
+    &--list{
+        list-style: none;
+        padding-left: 0;
+        margin: 2rem 2rem;
+        &-item {
+            font-size: .7rem;
+            font-weight: 100;
+        }
     }
 }
 
+.space {
+    height: 4rem;
+}
+
+@media screen and (min-width:768px) {
+
+    .experience {
+        &--list {
+
+            &-item {
+                font-size: .8rem;
+            }
+        }
+    }
+
+}
 
 @media screen and (min-width:1024px) {
-    .logo {
-        align-self: flex-start;
-        width: 15rem;
-        height: 15rem;
+// ! This was the reason I had to recreate the entire project. using flex for both moble and desktop versions of the site is working out pretty swell.
+// ! key changes were to add spacer divs in desktop mode and give the pink logo a different order to that it's last on the flex order.
+// ! also had to change the width of all the divs to 33% so they could be even.
 
-        &--rh{
-            grid-area: logo1;   
+    .logo {
+        margin: auto 0;
+        width: 33%;
+
+        &--rh {
+            height: 15rem;
         }
 
         &--pink {
-            grid-area: logo2;
+            height: 10rem;
+            order: 1;
         }
-
     }
-
-
     .experience {
-        // ! Wasn't able to get it exactly like the mock up. had trouble with the job title/location formating. not able to space them out corretly. Mobile mode is fone though.
-
-        padding-left: 1rem;
-        &-1{
-            grid-area: main1;
-        }
-        &-2{
-            grid-area: main2;
-        }
-        &-3{
-            grid-area: main3;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        &--block {
+            margin: 0;
+            width: 33%;
         }
 
-        &__job-time {
-            float: inline-end;
+        &--title {
+
+            margin: 1rem;
+            &__title {
+                font-size: .7rem;
+                letter-spacing: 1px;
+            }
+
+            &__time {
+                left: 16.3rem;
+                top: .5rem;
+                letter-spacing: 0;
+                width: fit-content;
+            }
         }
 
-        &__job-title {
-            font-size: 1rem;
-        }
-        &__job-locat {
-            margin-right: 8rem;
-            font-size: 3rem;
+        &--list {
+
+            &-item{   
+                font-size: .9rem;
+            }
         }
 
-        &__list-item {
-            font-size: 1rem;
-        }
-
+ 
 
     }
 
-    .main {
+    .space {
+        &--holder {
+            width: 33%;
+        }
+    }
+}
 
+
+// *Education Page 
+
+
+
+// School block
+
+.school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--name {
+
+        h3 {
+            font-size: .9rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 0;
+        }
         p {
-            position: unset;
+            color: #666;
+            margin-top: 0;
+        }
+    }
+}
+
+.logo {
+
+    &--cuny {
+        height: 7rem;
+        max-width: 14rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .school {
+        gap: 4rem;
+
+        p{
             font-size: .8rem;
-            max-width: fit-content;
         }
+    } 
+}
 
+@media screen and (min-width: 1024px) {
 
-        &--container {
-            display: grid;
-            grid-template-columns: 25vw 50vw 25vw;
-            grid-template-areas:    
-            ". top ."
-            "logo1 main1 ."
-            ". main2 ."
-            ". main3 logo2";
-            
+    .logo {
+        &--cuny {
+            height: 9rem;
         }
+    }
 
+    .school {
+
+        &--name {
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
 
 }
+
+
+// Showcase block 
+
+
+.showcase {
+
+    h3 {
+        font-size: 2.2em;
+        margin: 3rem;
+    }
+
+    &--container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 3rem;
+    }
+
+    &--item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: .7rem .7rem;
+
+    }
+
+    .logo {
+        height: 5rem;
+        width: 8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .showcase {
+
+        &--item {
+            justify-content: center;
+
+
+            p {
+                font-size: .8rem;
+                width: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .showcase {
+        
+        &--item {
+            padding: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .logo {
+            height: 6rem;
+        }
+        
+    }
+}
+
+
+// *skills page 
+
+
+    .showcase {
+        &--container {
+
+            &-skill {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem;
+            }
+        }
+        &--half {
+            &-1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &-2 {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 2rem ;
+        
+                .showcase--item .logo{
+                    width: 8rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .showcase {
+            &--container {
+                &-skill {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+            }
+
+            &--half {
+                &-2 {
+                    .showcase--item .logo{
+                        width: 10rem;
+                        height: 10rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
 
 

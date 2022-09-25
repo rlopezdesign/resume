@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 100;
   letter-spacing: 6px;
 }
@@ -36,24 +36,16 @@ p {
   fill: #fff;
 }
 
-.nav__link, .nav .name {
+body a {
   text-decoration: none;
   color: #fff;
   transition: all 0.3s;
 }
-.nav__link:hover, .nav .name:hover {
+body a:hover {
   color: #666;
-  text-decoration: none;
 }
-
-.logo {
-  fill: #fff;
-}
-
-.icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #fff;
+body h2 {
+  font-size: 1rem;
 }
 
 .collapsible {
@@ -99,7 +91,7 @@ p {
   transform: translateY(0.27rem);
 }
 .collapsible--expanded .collapsible__chevron {
-  rotate: 180deg;
+  transform: rotate(180deg);
   transform: translatey(-3.2rem);
 }
 
@@ -113,9 +105,6 @@ p {
   .collapsible__chevron {
     display: none;
   }
-  .collapsible__line {
-    width: 100%;
-  }
   .collapsible__short-line {
     display: none;
   }
@@ -123,167 +112,299 @@ p {
     font-size: 3rem;
     margin-top: 0;
   }
-  body h3 {
+  body h2 {
     font-size: 1.2rem;
     letter-spacing: 3px;
     margin: 0.5rem 0.5rem;
   }
 }
-.main {
-  margin-top: 3rem;
+@media screen and (min-width: 1024px) {
+  body h2 {
+    font-size: 1.5rem;
+  }
 }
-.main__summary {
-  padding: 1.5rem 1rem;
+.summary--line-container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+  gap: 4rem;
+}
+.summary--title {
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+.summary--text {
+  font-size: 0.9rem;
   font-weight: 100;
+  margin: 0 2rem;
+  margin-bottom: 4rem;
 }
-.main .top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: top;
-}
-.main--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main__line {
-  height: 0.6rem;
-  margin-bottom: 3rem;
-}
-.main__img {
-  width: 8rem;
-  height: 8rem;
+.summary--img {
+  width: 10rem;
+  height: 10rem;
 }
 
+.icon--line {
+  height: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .summary--title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .summary--text {
+    font-size: 1.1rem;
+  }
+}
 @media screen and (min-width: 1024px) {
-  .main__line {
-    height: 0.8rem;
+  .summary--title {
+    font-weight: 400;
   }
-  .main h2 {
-    font-size: 1.8rem;
-  }
-  .main p {
-    font-size: 1.3rem;
-    max-width: 50%;
-  }
-  .main__img {
-    width: 9.5rem;
-    height: 9.5rem;
+  .summary--text {
+    font-size: 1.5rem;
   }
 }
-.experience {
-  width: 85%;
+.top {
   display: flex;
-  margin-bottom: 2.5rem;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
 }
-.experience--logo {
-  width: 6rem;
+.top h3 {
+  font-size: 1.5rem;
+}
+
+.main__line {
+  height: 1rem;
+}
+
+.logo--rh {
   height: 5rem;
-  margin: 1.5rem;
+  margin: 2rem;
+}
+.logo--pink {
+  height: 5rem;
+  margin: 2rem;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+.experience--block {
+  display: flex;
+  flex-direction: column;
 }
 .experience--title {
+  margin: 2rem 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.experience--title__title {
   position: absolute;
-  padding: 0;
-}
-.experience__job-title {
-  font-size: 0.6rem;
-  letter-spacing: 1px;
-  text-align: left;
-  margin: 0;
-}
-.experience__job-locat {
-  position: relative;
-  color: #666;
-  font-size: 0.6rem;
-  font-weight: 100;
-  text-align: left;
-  margin: 0;
-  top: -0.5rem;
-}
-.experience__job-time {
-  position: relative;
-  color: #666;
-  font-size: 0.5rem;
-  font-weight: 100;
-  text-align: right;
-  margin: 0;
-  left: 5rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  left: 1rem;
   top: -0.2rem;
 }
-.experience .same-company {
-  position: relative;
-  color: #666;
-  font-size: 0.5rem;
-  text-align: right;
-  margin: 0;
-  left: 5rem;
-  top: -0.6rem;
+.experience--title__locat {
+  position: absolute;
+  font-size: 0.8rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: #777;
+  left: 1rem;
+  top: 0.7rem;
+}
+.experience--title__time {
+  position: absolute;
+  font-size: 0.6rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: #777;
+  left: 19rem;
+  top: 0.5rem;
+}
+.experience--title__time-short {
+  left: 11rem;
+}
+.experience .same-company .experience--title__time {
+  left: 12rem;
+  top: 0.1rem;
+}
+.experience__line {
+  height: 1rem;
+  margin: 1rem;
 }
 .experience--list {
   list-style: none;
-  margin-top: 3rem;
   padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 2rem 2rem;
+}
+.experience--list-item {
+  font-size: 0.7rem;
   font-weight: 100;
 }
-.experience--list .experience__list--item {
-  text-decoration: none;
+
+.space {
+  height: 4rem;
 }
-.experience__line {
-  height: 0.8rem;
-  margin: 0.5rem 0;
+
+@media screen and (min-width: 768px) {
+  .experience--list-item {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin: auto 0;
+    width: 33%;
+  }
+  .logo--rh {
+    height: 15rem;
+  }
+  .logo--pink {
+    height: 10rem;
+    order: 1;
+  }
+  .experience {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .experience--block {
+    margin: 0;
+    width: 33%;
+  }
+  .experience--title {
+    margin: 1rem;
+  }
+  .experience--title__title {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+  .experience--title__time {
+    left: 16.3rem;
+    top: 0.5rem;
+    letter-spacing: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .experience--list-item {
+    font-size: 0.9rem;
+  }
+  .space--holder {
+    width: 33%;
+  }
+}
+.school {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.school--name h3 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+}
+.school--name p {
+  color: #666;
+  margin-top: 0;
+}
+
+.logo--cuny {
+  height: 7rem;
+  max-width: 14rem;
+}
+
+@media screen and (min-width: 768px) {
+  .school {
+    gap: 4rem;
+  }
+  .school p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo--cuny {
+    height: 9rem;
+  }
+  .school--name h3 {
+    font-size: 1.1rem;
+  }
+  .school--name p {
+    font-size: 1rem;
+  }
+}
+.showcase h3 {
+  font-size: 2.2em;
+  margin: 3rem;
+}
+.showcase--container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+.showcase--item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0.7rem;
+}
+.showcase .logo {
+  height: 5rem;
+  width: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase--item {
+    justify-content: center;
+  }
+  .showcase--item p {
+    font-size: 0.8rem;
+    width: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .showcase--item {
+    padding: 2rem;
+  }
+  .showcase p {
+    font-size: 1rem;
+  }
+  .showcase .logo {
+    height: 6rem;
+  }
+}
+.showcase--container-skill {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.showcase--half-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.showcase--half-2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2rem;
+}
+.showcase--half-2 .showcase--item .logo {
+  width: 8rem;
+  height: 6rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .logo {
-    align-self: flex-start;
-    width: 15rem;
-    height: 15rem;
+  .showcase--container-skill {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
-  .logo--rh {
-    grid-area: logo1;
-  }
-  .logo--pink {
-    grid-area: logo2;
-  }
-  .experience {
-    padding-left: 1rem;
-  }
-  .experience-1 {
-    grid-area: main1;
-  }
-  .experience-2 {
-    grid-area: main2;
-  }
-  .experience-3 {
-    grid-area: main3;
-  }
-  .experience__job-time {
-    float: inline-end;
-  }
-  .experience__job-title {
-    font-size: 1rem;
-  }
-  .experience__job-locat {
-    margin-right: 8rem;
-    font-size: 3rem;
-  }
-  .experience__list-item {
-    font-size: 1rem;
-  }
-  .main p {
-    position: unset;
-    font-size: 0.8rem;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-  }
-  .main--container {
-    display: grid;
-    grid-template-columns: 25vw 50vw 25vw;
-    grid-template-areas: ". top ." "logo1 main1 ." ". main2 ." ". main3 logo2";
+  .showcase--half-2 .showcase--item .logo {
+    width: 10rem;
+    height: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
