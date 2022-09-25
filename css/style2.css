@@ -378,4 +378,33 @@ body h2 {
   .showcase .logo {
     height: 6rem;
   }
+}
+.showcase--container-skill {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.showcase--half-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.showcase--half-2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2rem;
+}
+.showcase--half-2 .showcase--item .logo {
+  width: 8rem;
+  height: 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .showcase--container-skill {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .showcase--half-2 .showcase--item .logo {
+    width: 10rem;
+    height: 10rem;
+  }
 }/*# sourceMappingURL=style2.css.map */

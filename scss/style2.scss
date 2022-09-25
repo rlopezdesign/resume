@@ -504,7 +504,62 @@ body {
         }
         
     }
-
-    
-
 }
+
+
+// *skills page 
+
+
+    .showcase {
+        &--container {
+
+            &-skill {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem;
+            }
+        }
+        &--half {
+            &-1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &-2 {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 2rem ;
+        
+                .showcase--item .logo{
+                    width: 8rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .showcase {
+            &--container {
+                &-skill {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+            }
+
+            &--half {
+                &-2 {
+                    .showcase--item .logo{
+                        width: 10rem;
+                        height: 10rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
