@@ -37,6 +37,7 @@ body {
 
     &__chevron {
         cursor: pointer;
+        display: inline-block;
         height: 1.3rem;
         margin-bottom: 0;
         padding-bottom: 0;
@@ -77,8 +78,9 @@ body {
         }
 
         .collapsible__chevron {
-            transform: rotate(180deg);
-            transform: translatey(-3.2rem);
+            
+            transform: rotate(180deg) translatey(-3.2rem);
+            
         }
     }
 }
